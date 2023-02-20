@@ -1,0 +1,143 @@
+@import url('https://fonts.googleapis.com/css2?family=Satisfy&display=swap');
+
+
+.navbar {
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    background-color: rgb(38, 38, 63);
+    color: white;
+    position: fixed;
+    z-index: 1000;
+    
+}
+.logo {
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+}
+.logoimg {
+    height: 2.5rem;
+    /* width: 220px; */
+    object-fit: contain;
+    /* background-color: yellow; */
+    cursor: pointer;
+}
+.logoText {
+    font-size: 28px;
+    font-weight: 600;
+    font-style: italic;
+    font-family: 'Satisfy', cursive;
+    cursor: pointer;  
+    position: relative; 
+    /* background-color: green; */
+}
+.logoText::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #757ce8;
+    transition: width 0.3s ease-in-out;
+    
+}
+.logoText:hover::before {
+    width: 100%;
+}
+/* .links {
+    margin-right: 40px;
+} */
+.navigation-links {
+    display: flex;
+    gap: 1rem;
+    color: white;
+    /* list-style: none; */
+}
+.link {
+    list-style: none;
+    font-size: 18px;
+    font-weight:500;
+    font-family: 'Satisfy', cursive;
+    cursor: pointer;
+    position: relative;
+    padding: 5px 5px;
+
+}
+.link::before {
+    position: absolute;
+    content: "";
+    bottom: 0;
+    left: 0;
+    height: 3px;
+    background-color: #757ce8;
+    width: 0;
+    transition: width 0.3s ease-in-out;
+}
+.link:hover::before {
+    width: 100%;
+}
+.nav-btns {
+    display: flex;
+    gap: 1rem;
+}
+@media(max-width:600px) {
+    .links {
+        display: none;
+    }
+    .nav-btns {
+        display: none;
+    }
+    
+}
+@media(min-width:601px) {
+    .menu {
+        display: none;
+    }
+}
+.sideNav {
+    height: 60vh;
+    width: 100%;
+    background-color: rgb(38, 38, 63);
+    position: fixed;
+    top: 4rem;
+    right: 0;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+}
+
+
+
+.sideNav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+.sideNavlink {
+    list-style: none;
+    font-size: 18px;
+    font-weight:500;
+    font-family: 'Satisfy', cursive;
+    color: white;
+    width: 70%;
+    text-align: center;
+    padding: 10px;
+    border-bottom: 1px solid #757ce8;
+    
+}
+.sideNav-btns {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 20%;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
